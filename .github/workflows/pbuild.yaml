@@ -1,0 +1,17 @@
+name: Run Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Call your custom action template
+      - name: Run Pbuild Template
+        uses: adrianschroeter/pbuild@main
+        with:
+          dist: 'tumbleweed' # Optional: defaults to tumbleweed anyway
+
