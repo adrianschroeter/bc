@@ -25,7 +25,11 @@ jobs:
           archive: false
       - uses: actions/upload-artifact@v7
         with:
-          name: tumbleweed-x86_64-rpms
+          name: tumbleweed-x86_64-rpm
           path: _build.tumbleweed.x86_64/bc-1*.x86_64.rpm
           archive: false
+      - uses: actions/upload-artifact@v7
+        with:
+          name: tumbleweed-x86_64-everything.zip
+          path: _build.tumbleweed.x86_64
 
