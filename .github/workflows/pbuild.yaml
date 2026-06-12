@@ -20,6 +20,7 @@ jobs:
       # Export build artifacts
       - uses: actions/upload-artifact@v7
         with:
-          name: tumbleweed-rpms
-          path: _build.tumbleweed.x86_64/*.rpm
+          name: tumbleweed-x86_64-rpms
+          path: _build.tumbleweed.x86_64/bc-1*.x86_64.rpm
+          archive: false
 
