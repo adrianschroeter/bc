@@ -17,3 +17,9 @@ jobs:
         with:
           dist: 'tumbleweed' # Optional: defaults to tumbleweed anyway
 
+      # Export build artifacts
+      - uses: actions/upload-artifact@v7
+        with:
+          name: tumbleweed-rpms
+          path: _build.tumbleweed.x86_64/*.rpm
+
